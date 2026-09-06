@@ -1,11 +1,13 @@
 <?php
 require_once __DIR__ . '/env.php';
-// Sesuaikan bagian ini dengan setting PostgreSQL kamu.
-$DB_HOST = 'localhost';
-$DB_PORT = '5432';
-$DB_NAME = 'simpul_rajut';
-$DB_USER = 'postgres';
-$DB_PASS = 'postgres'; // password yang kamu buat saat install PostgreSQL
+
+// Kalau berjalan di Railway, variabel ini sudah otomatis tersedia (dari tab Variables).
+// Kalau berjalan di laptop (lokal), akan pakai nilai default localhost di bawah ini.
+$DB_HOST = $_ENV['DB_HOST'] ?? getenv('DB_HOST') ?: 'localhost';
+$DB_PORT = $_ENV['DB_PORT'] ?? getenv('DB_PORT') ?: '5432';
+$DB_NAME = $_ENV['DB_NAME'] ?? getenv('DB_NAME') ?: 'simpul_rajut';
+$DB_USER = $_ENV['DB_USER'] ?? getenv('DB_USER') ?: 'postgres';
+$DB_PASS = $_ENV['DB_PASS'] ?? getenv('DB_PASS') ?: 'postgres';
 
 try {
     $pdo = new PDO(
