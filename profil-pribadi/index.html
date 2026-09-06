@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meilani Oktaviana Eka Putri — Junior Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header class="nav">
+  <a href="#home" class="nav__brand">Profil Pribadi<span>.</span></a>
+  <nav class="nav__links">
+    <a href="#tentang">Tentang</a>
+    <a href="#keahlian">Keahlian</a>
+    <a href="#portofolio">Portofolio</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Buka menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <section id="home" class="hero">
+    <div class="hero__text">
+      <p class="hero__role">Junior Web Developer</p>
+      <h1 class="hero__name">Meilani Oktaviana Eka<br>Putri</h1>
+      <p class="hero__desc">Membangun antarmuka web yang rapi, cepat, dan enak dipakai — dari halaman statis sampai aplikasi dengan basis data. Baru mulai, tapi serius belajar dari fondasi yang benar.</p>
+      <div class="hero__actions">
+        <a href="#portofolio" class="btn btn--solid">Lihat portofolio</a>
+        <a href="#kontak" class="btn btn--ghost">Hubungi saya</a>
+      </div>
+    </div>
+<div class="hero__mark">
+  <div class="hero__photo-wrap">
+    <img src="img/foto saya hitam putih tanpa bg.png" alt="Foto Meilani Oktaviana Eka Putri" class="hero__photo">
+    <span class="hero__accent-dot"></span>
+  </div>
+</div>
+  </section>
+
+  <section id="tentang" class="section">
+  <div class="section__head">
+    <h2>Tentang saya</h2>
+  </div>
+  <div class="about">
+    <p class="about__statement">Belajar dari dasar Berkarya melalui kode</p>
+    <div class="about__body">
+      <p>Saya adalah siswi Rekayasa Perangkat Lunak (RPL) yang memiliki ketertarikan pada pengembangan website. Saat ini, saya sedang menempuh sertifikasi <em>Junior Web Developer</em> sebagai bagian dari proses untuk mengembangkan dan menguji kemampuan saya dalam dunia web development.</p>
+      <p>Dalam prosesnya, saya mempelajari dasar-dasar pengembangan web, mulai dari HTML untuk membangun struktur halaman, CSS untuk mengatur tampilan, JavaScript untuk menambahkan interaksi, serta PHP dan PostgreSQL untuk mengembangkan fitur dinamis dan mengelola data.</p>
+      <p>Melalui dua proyek uji kompetensi, yaitu website profil pribadi dan toko daring <strong>Amoura Atelier</strong>, saya menerapkan kemampuan tersebut untuk membangun website yang tidak hanya menarik secara visual, tetapi juga memiliki fungsi dan pengelolaan data yang baik.</p>
+    </div>
+  </div>
+  <div class="about__stats">
+    <div class="stat-tile"><span>Basis</span>HTML, CSS, JavaScript</div>
+    <div class="stat-tile"><span>Belajar</span>PHP &amp; PostgreSQL</div>
+    <div class="stat-tile"><span>Alat</span>VS Code, pgAdmin</div>
+    <div class="stat-tile"><span>Target</span>Sertifikasi Junior Web Developer</div>
+  </div>
+</section>
+
+  <section id="keahlian" class="section section--alt">
+  <div class="section__head">
+    <h2>Keahlian</h2>
+    <p>Bukan angka persen yang dikarang — ini level kenyamanan saya yang sebenarnya di tiap alat.</p>
+  </div>
+
+  <div class="skillset">
+    <div class="skillset__group">
+      <h3>Front-end</h3>
+      <ol class="skillset__list">
+        <li>
+          <span class="skillset__num">01</span>
+          <div class="skillset__body">
+            <p class="skillset__name">HTML5 semantik</p>
+            <p class="skillset__desc">Struktur halaman rapi, elemen dipilih sesuai makna kontennya.</p>
+          </div>
+          <span class="skillset__level skillset__level--tinggi">Nyaman dipakai</span>
+        </li>
+        <li>
+          <span class="skillset__num">02</span>
+          <div class="skillset__body">
+            <p class="skillset__name">CSS3 &amp; layout responsif</p>
+            <p class="skillset__desc">Flexbox dan Grid jadi andalan, sudah terbiasa desain mobile-first.</p>
+          </div>
+          <span class="skillset__level skillset__level--tinggi">Nyaman dipakai</span>
+        </li>
+        <li>
+          <span class="skillset__num">03</span>
+          <div class="skillset__body">
+            <p class="skillset__name">JavaScript dasar–menengah</p>
+            <p class="skillset__desc">DOM manipulation dan event handling sudah lancar, async masih belajar.</p>
+          </div>
+          <span class="skillset__level skillset__level--tengah">Sedang berkembang</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="skillset__group">
+      <h3>Back-end &amp; data</h3>
+      <ol class="skillset__list">
+        <li>
+          <span class="skillset__num">04</span>
+          <div class="skillset__body">
+            <p class="skillset__name">PHP prosedural &amp; PDO</p>
+            <p class="skillset__desc">Bisa bikin CRUD aman dengan prepared statement dari nol.</p>
+          </div>
+          <span class="skillset__level skillset__level--tengah">Sedang berkembang</span>
+        </li>
+        <li>
+          <span class="skillset__num">05</span>
+          <div class="skillset__body">
+            <p class="skillset__name">PostgreSQL (query, relasi tabel)</p>
+            <p class="skillset__desc">Paham JOIN, foreign key, dan desain skema sederhana.</p>
+          </div>
+          <span class="skillset__level skillset__level--tengah">Sedang berkembang</span>
+        </li>
+        <li>
+          <span class="skillset__num">06</span>
+          <div class="skillset__body">
+            <p class="skillset__name">Struktur folder proyek</p>
+            <p class="skillset__desc">Terbiasa memisahkan config, includes, dan halaman biar rapi.</p>
+          </div>
+          <span class="skillset__level skillset__level--tinggi">Nyaman dipakai</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="skillset__group">
+      <h3>Alat &amp; cara kerja</h3>
+      <ol class="skillset__list">
+        <li>
+          <span class="skillset__num">07</span>
+          <div class="skillset__body">
+            <p class="skillset__name">Git dasar</p>
+            <p class="skillset__desc">Commit, branch, dan push masih di level fundamental.</p>
+          </div>
+          <span class="skillset__level skillset__level--dasar">Masih dasar</span>
+        </li>
+        <li>
+          <span class="skillset__num">08</span>
+          <div class="skillset__body">
+            <p class="skillset__name">pgAdmin</p>
+            <p class="skillset__desc">Terbiasa bikin database, jalankan query, dan cek data lewat GUI.</p>
+          </div>
+          <span class="skillset__level skillset__level--tengah">Sedang berkembang</span>
+        </li>
+        <li>
+          <span class="skillset__num">09</span>
+          <div class="skillset__body">
+            <p class="skillset__name">Debugging &amp; membaca dokumentasi</p>
+            <p class="skillset__desc">Nyaman menelusuri error message dan cari solusinya sendiri.</p>
+          </div>
+          <span class="skillset__level skillset__level--tinggi">Nyaman dipakai</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  <section id="portofolio" class="section">
+  <div class="section__head">
+    <h2>Portofolio</h2>
+    <p>Proyek yang saya susun sebagai bukti kompetensi dan pengalaman kerja.</p>
+  </div>
+
+  <div class="portfolio-list">
+    <article class="portfolio-item">
+      <span class="portfolio-item__num">01</span>
+      <div class="portfolio-item__body">
+        <div class="portfolio-item__head">
+          <h3>Web Profil Pribadi</h3>
+          <span class="portfolio-item__tag">Web statis</span>
+        </div>
+        <p>Halaman yang sedang Anda buka — HTML &amp; CSS murni dengan sedikit JavaScript untuk interaksi navigasi, dibangun tanpa framework agar strukturnya mudah ditelusuri.</p>
+        <div class="portfolio-item__tech">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="portfolio-item">
+      <span class="portfolio-item__num">02</span>
+      <div class="portfolio-item__body">
+        <div class="portfolio-item__head">
+          <h3>Amoura Atelier — Toko Rajutan Tangan</h3>
+          <span class="portfolio-item__tag">Web dinamis</span>
+        </div>
+        <p>Situs usaha rajutan dengan katalog produk yang diambil dari basis data PostgreSQL, halaman detail produk, dan formulir kontak yang tersimpan otomatis. Dibangun dengan PHP dan pola akses data yang aman (prepared statement).</p>
+        <div class="portfolio-item__tech">
+          <span>PHP</span><span>PostgreSQL</span><span>PDO</span>
+        </div>
+        <a href="../toko-rajut/index.php" class="portfolio-item__link">Buka situs Amoura Atelier →</a>
+      </div>
+    </article>
+
+    <article class="portfolio-item">
+      <span class="portfolio-item__num">03</span>
+      <div class="portfolio-item__body">
+        <div class="portfolio-item__head">
+          <h3>Web PPID — UPT Latkesmas Murnajati</h3>
+          <span class="portfolio-item__tag">Praktik Kerja Lapangan</span>
+        </div>
+        <p>Sistem informasi PPID (Pejabat Pengelola Informasi dan Dokumentasi) yang dikembangkan selama PKL, terdiri dari dua modul: Halaman Publik untuk masyarakat dan Dashboard Admin untuk pengelolaan informasi internal.</p>
+        <div class="portfolio-item__tech">
+          <span>PHP</span><span>PostgreSQL</span>
+        </div>
+        <span class="portfolio-item__note">Belum dirilis publik</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="kontak" class="section section--alt">
+  <div class="section__head">
+    <h1>Hubungi Saya</h1>
+  </div>
+
+  <div class="kontak__grid">
+    <div class="contact">
+      <div class="contact__item contact__item--alamat">
+        <span>Domisili</span>
+        <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Niken+Gandini+No.98%2C+Ponorogo" target="_blank" rel="noopener">Jl. Niken Gandini No.98, Plampitan, Setono, Kec. Jenangan, Kabupaten Ponorogo, Jawa Timur 63492</a>
+      </div>
+      <div class="contact__item">
+        <span>Email</span>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=meilani1856@gmail.com" target="_blank" rel="noopener">meilani1856@gmail.com</a>
+      </div>
+      <div class="contact__item">
+        <span>WhatsApp</span>
+        <a href="https://wa.me/62856071539407" target="_blank" rel="noopener">0856-0715-3907</a>
+      </div>
+    </div>
+
+    <div class="contact__row">
+      <p class="contact__row-label">Ikuti saya</p>
+      <div class="contact__social">
+        <a href="https://instagram.com/mell_maymay" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+        <a href="https://tiktok.com/@alllmeyy" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3c.4 2.2 1.8 3.7 4 4v2.7c-1.4 0-2.8-.4-4-1.2v6.6c0 3-2.4 5.4-5.4 5.4S3.2 18.1 3.2 15.1 5.6 9.7 8.6 9.7c.4 0 .8 0 1.1.1v2.8c-.4-.1-.7-.2-1.1-.2-1.5 0-2.7 1.2-2.7 2.7S7.1 17.8 8.6 17.8s2.7-1.2 2.7-2.7V3H14z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Meilani O.E.P. Dibuat untuk Uji Kompetensi Skema Junior Web Developer.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
