@@ -1,0 +1,9 @@
+{
+    "name": "meilani/uji-serkom-junior-web-developer",
+    "description": "Proyek uji kompetensi Junior Web Developer",
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo": "*",
+        "ext-pdo_pgsql": "*"
+    }
+}
