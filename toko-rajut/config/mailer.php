@@ -9,23 +9,30 @@ use PHPMailer\PHPMailer\Exception;
 
 /**
  * Kirim email konfirmasi pesan ke pembeli.
- * Return true kalau berhasil, false kalau gagal (tidak menghentikan alur utama).
  */
 function kirim_email_konfirmasi(string $emailTujuan, string $namaPembeli, string $isiPesan): bool
 {
     $mail = new PHPMailer(true);
 
     try {
+        // --- TAMBAHKAN BARIS INI UNTUK DEBUGGING SEMENTARA ---
+        $mail->SMTPDebug = 2; 
+
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = $_ENV['SMTP_EMAIL'] ?? '';
-        $mail->Password   = $_ENV['SMTP_APP_PASSWORD'] ?? '';
+        
+        // --- UBAH CARA BACA VARIABEL KE getenv() ---
+        $smtpEmail = getenv('SMTP_EMAIL') ?: $_ENV['SMTP_EMAIL'] ?? '';
+        $smtpPass  = getenv('SMTP_APP_PASSWORD') ?: $_ENV['SMTP_APP_PASSWORD'] ?? '';
+        
+        $mail->Username   = $smtpEmail;
+        $mail->Password   = $smtpPass;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
         $mail->CharSet    = 'UTF-8';
 
-        $mail->setFrom($_ENV['SMTP_EMAIL'] ?? '', 'Amoura Atelier');
+        $mail->setFrom($smtpEmail, 'Amoura Atelier');
         $mail->addAddress($emailTujuan, $namaPembeli);
 
         $mail->isHTML(true);
@@ -49,7 +56,9 @@ function kirim_email_konfirmasi(string $emailTujuan, string $namaPembeli, string
         $mail->send();
         return true;
     } catch (Exception $e) {
-        error_log('Gagal kirim email: ' . $mail->ErrorInfo);
-        return false;
+        // --- UBAH CATCH AGAR ERROR MUNCUL DI LAYAR ---
+        echo "<h3>Gagal kirim email:</h3>";
+        echo "<pre>" . $mail->ErrorInfo . "</pre>";
+        die(); // Hentikan eksekusi agar tidak redirect ke halaman sukses
     }
 }
