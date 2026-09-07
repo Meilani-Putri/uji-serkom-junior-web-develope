@@ -1,13 +1,20 @@
 <?php
 require_once __DIR__ . '/env.php';
 
-// Kalau berjalan di Railway, variabel ini sudah otomatis tersedia (dari tab Variables).
-// Kalau berjalan di laptop (lokal), akan pakai nilai default localhost di bawah ini.
-$DB_HOST = $_ENV['DB_HOST'] ?? getenv('DB_HOST') ?: 'localhost';
-$DB_PORT = $_ENV['DB_PORT'] ?? getenv('DB_PORT') ?: '5432';
-$DB_NAME = $_ENV['DB_NAME'] ?? getenv('DB_NAME') ?: 'simpul_rajut';
-$DB_USER = $_ENV['DB_USER'] ?? getenv('DB_USER') ?: 'postgres';
-$DB_PASS = $_ENV['DB_PASS'] ?? getenv('DB_PASS') ?: 'postgres';
+function ambil_env(string $kunci, string $default): string
+{
+    $nilai = getenv($kunci);
+    if ($nilai === false || $nilai === '') {
+        return $default;
+    }
+    return $nilai;
+}
+
+$DB_HOST = ambil_env('DB_HOST', 'localhost');
+$DB_PORT = ambil_env('DB_PORT', '5432');
+$DB_NAME = ambil_env('DB_NAME', 'simpul_rajut');
+$DB_USER = ambil_env('DB_USER', 'postgres');
+$DB_PASS = ambil_env('DB_PASS', 'postgres');
 
 try {
     $pdo = new PDO(
