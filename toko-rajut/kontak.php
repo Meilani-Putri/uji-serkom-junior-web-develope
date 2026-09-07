@@ -45,7 +45,7 @@ include __DIR__ . '/includes/header.php';
   <div class="kontak-grid">
     <div class="kontak-info">
      <p><span>Email</span>meilani1856@gmail.com</p>
-     <p><span>WhatsApp</span><a href="https://wa.me/085607153907" target="_blank" rel="noopener">085607153907</a></p>
+     <p><span>WhatsApp</span><a href="https://wa.me/6285607153907" target="_blank" rel="noopener">085607153907</a></p>
      <p><span>Jam layanan</span>Senin–jumat, 09.00–10.00</p>
     </div>
 
