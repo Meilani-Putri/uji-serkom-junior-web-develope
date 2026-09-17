@@ -12,10 +12,14 @@ include __DIR__ . '/includes/header.php';
 ?>
 
 <section class="section" style="padding-top:6vh;">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.php">Beranda</a> <span>/</span> <strong>Tentang</strong>
+  </nav>
+
   <div class="section__head">
     <h2>Cerita di Balik Setiap Rajutan</h2>
   </div>
-  <div class="tentang-grid">
+  <div class="tentang-grid" data-aos="fade-up">
     <div>
       <p>Amoura Atelier berawal dari kecintaan pada seni merajut yang dilakukan di waktu senggang, hingga tumbuh menjadi usaha rumahan di Madiun. Dari benang katun dan wol pilihan, setiap baju, sweater, tas, hingga mainan rajut dibuat dengan tangan, satu per satu, tanpa mesin.</p>
       <p>Kami percaya bahwa sesuatu yang dibuat dengan sabar akan memiliki cerita tersendiri. Karena itu, kami tidak mengejar jumlah, melainkan menjaga setiap simpul tetap rapi dan setiap jahitan dibuat dengan penuh perhatian, agar setiap karya terasa nyaman, hangat, dan dapat menemani keseharianmu.</p>

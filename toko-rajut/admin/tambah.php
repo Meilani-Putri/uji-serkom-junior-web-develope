@@ -63,9 +63,10 @@ include __DIR__ . '/../includes/admin_header.php';
   <p>Lengkapi detail produk baru untuk katalog Amoura Atelier.</p>
 </div>
 
+<div id="jsErrorAlert" class="alert alert--gagal" style="display: none;"></div>
 <?php if ($error): ?><div class="alert alert--gagal"><?= bersihkan($error) ?></div><?php endif; ?>
 
-<form class="admin-form" method="post" action="tambah.php" enctype="multipart/form-data">
+<form class="admin-form" id="formTambahProduk" method="post" action="tambah.php" enctype="multipart/form-data" onsubmit="return validasiFormTambah(event)">
   <div class="admin-form__main">
 
     <div class="form-section">
@@ -166,6 +167,43 @@ include __DIR__ . '/../includes/admin_header.php';
       tampilkanWarna(warnaText.value.trim() || '#7C9473');
     }
   });
+
+  function validasiFormTambah(event) {
+    const nama = document.getElementById('nama').value.trim();
+    const kategori = document.getElementById('kategori_id').value;
+    const harga = parseFloat(document.getElementById('harga').value);
+    const stok = parseInt(document.getElementById('stok').value);
+    const errBox = document.getElementById('jsErrorAlert');
+
+    let errors = [];
+
+    if (nama.length < 3) errors.push("Nama produk minimal 3 karakter.");
+    if (!kategori) errors.push("Pilih kategori produk.");
+    if (isNaN(harga) || harga <= 0) errors.push("Harga harus lebih dari 0.");
+    if (isNaN(stok) || stok < 0) errors.push("Stok tidak boleh bernilai negatif.");
+
+    if (gambarInput.files && gambarInput.files[0]) {
+      const file = gambarInput.files[0];
+      const ext = file.name.split('.').pop().toLowerCase();
+      const validExt = ['jpg', 'jpeg', 'png', 'webp'];
+      
+      if (!validExt.includes(ext)) {
+        errors.push("Format file gambar harus JPG, PNG, atau WEBP.");
+      }
+      if (file.size > 3 * 1024 * 1024) {
+        errors.push("Ukuran file gambar tidak boleh melebihi 3MB.");
+      }
+    }
+
+    if (errors.length > 0) {
+      event.preventDefault();
+      errBox.innerHTML = errors.join('<br>');
+      errBox.style.display = 'block';
+      window.scrollTo(0, 0);
+      return false;
+    }
+    return true;
+  }
 </script>
 
 <?php include __DIR__ . '/../includes/admin_footer.php'; ?>

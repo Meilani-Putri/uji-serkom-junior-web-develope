@@ -76,9 +76,10 @@ $gambarPreviewUrl = !empty($produk['gambar']) ? '/toko-rajut/assets/img/produk/'
   <p>Perbarui detail produk <?= bersihkan($produk['nama']) ?>.</p>
 </div>
 
+<div id="jsErrorAlert" class="alert alert--gagal" style="display: none;"></div>
 <?php if ($error): ?><div class="alert alert--gagal"><?= bersihkan($error) ?></div><?php endif; ?>
 
-<form class="admin-form" method="post" action="edit.php?id=<?= (int)$id ?>" enctype="multipart/form-data">
+<form class="admin-form" id="formEditProduk" method="post" action="edit.php?id=<?= (int)$id ?>" enctype="multipart/form-data" onsubmit="return validasiFormEdit(event)">
   <div class="admin-form__main">
 
     <div class="form-section">
@@ -180,6 +181,41 @@ $gambarPreviewUrl = !empty($produk['gambar']) ? '/toko-rajut/assets/img/produk/'
       tampilkanWarna(warnaText.value.trim() || '#7C9473');
     }
   });
+
+  function validasiFormEdit(event) {
+    const nama = document.getElementById('nama').value.trim();
+    const harga = parseFloat(document.getElementById('harga').value);
+    const stok = parseInt(document.getElementById('stok').value);
+    const errBox = document.getElementById('jsErrorAlert');
+
+    let errors = [];
+
+    if (nama.length < 3) errors.push("Nama produk minimal 3 karakter.");
+    if (isNaN(harga) || harga <= 0) errors.push("Harga harus lebih dari 0.");
+    if (isNaN(stok) || stok < 0) errors.push("Stok tidak boleh bernilai negatif.");
+
+    if (gambarInput.files && gambarInput.files[0]) {
+      const file = gambarInput.files[0];
+      const ext = file.name.split('.').pop().toLowerCase();
+      const validExt = ['jpg', 'jpeg', 'png', 'webp'];
+      
+      if (!validExt.includes(ext)) {
+        errors.push("Format file gambar harus JPG, PNG, atau WEBP.");
+      }
+      if (file.size > 3 * 1024 * 1024) {
+        errors.push("Ukuran file gambar tidak boleh melebihi 3MB.");
+      }
+    }
+
+    if (errors.length > 0) {
+      event.preventDefault();
+      errBox.innerHTML = errors.join('<br>');
+      errBox.style.display = 'block';
+      window.scrollTo(0, 0);
+      return false;
+    }
+    return true;
+  }
 </script>
 
 <?php include __DIR__ . '/../includes/admin_footer.php'; ?>

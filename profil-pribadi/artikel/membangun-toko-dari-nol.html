@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membangun website toko dari nol — Meilani Oktaviana Eka Putri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar" aria-label="Navigasi utama">
+        <a href="../index.html#beranda" class="brand">
+            <span class="brand-mark">MO</span>
+            <span class="brand-text">
+                <span class="brand-name">Meilani Oktaviana Eka Putri</span>
+                <span class="brand-role">Junior Web Developer</span>
+            </span>
+        </a>
+        <a href="../index.html#artikel" class="nav-contact">Kembali ke Beranda</a>
+    </nav>
+</header>
+
+<main class="artikel-page">
+  <div class="container">
+
+    <article class="artikel-card">
+    <header class="artikel-header">
+      <span class="article-tag">Proyek</span>
+      <h1>Membangun website toko dari nol</h1>
+      <p class="artikel-meta">Ditulis oleh Meilani Oktaviana Eka Putri</p>
+    </header>
+
+    <div class="artikel-body">
+      <p><strong>Amoura Atelier</strong> adalah proyek toko rajutan yang saya bangun untuk uji kompetensi skema Junior Web Developer. Awalnya saya kira bagian tersulit adalah tampilannya, ternyata justru bagian yang tidak terlihat — struktur databasenya — yang paling banyak menyita waktu berpikir.</p>
+
+      <h2>Mulai dari tabel, bukan dari halaman</h2>
+      <p>Sebelum menulis HTML satu baris pun untuk katalog produk, saya rancang dulu tabel <code>kategori</code> dan <code>produk</code>, lalu memikirkan relasinya. Belakangan, saat menambah fitur keranjang dan checkout, saya baru sadar perlu tabel baru lagi: <code>pesanan</code> dan <code>pesanan_item</code>, supaya riwayat transaksi tidak ikut berubah kalau suatu saat harga produk diubah admin.</p>
+
+      <h2>Alur checkout yang paling banyak direvisi</h2>
+      <p>Alur keranjang → checkout → transaksi ini yang paling sering saya ubah. Beberapa hal yang saya pelajari sepanjang jalan:</p>
+      <ul>
+        <li>Validasi form itu harus dicek juga di server, bukan cuma lewat atribut <code>required</code> di HTML — karena atribut itu gampang dilewati.</li>
+        <li>Stok produk perlu dicek ulang persis sebelum transaksi disimpan, bukan cuma waktu barang dimasukkan ke keranjang, supaya tidak terjadi stok minus kalau ada dua pembeli mengambil barang yang sama nyaris bersamaan.</li>
+        <li>Menyimpan snapshot nama dan harga produk di tabel <code>pesanan_item</code> penting, supaya struk pesanan lama tidak berubah walau harga produk di katalog sudah diperbarui.</li>
+      </ul>
+
+      <p>Proyek ini masih terus saya kembangkan — bagian pencarian produk, kategori, dan laporan penjualan ditambahkan belakangan setelah fitur utamanya jalan. Rasanya proses ini yang paling mendekati gambaran pekerjaan web developer sungguhan: jarang selesai dalam satu kali coba.</p>
+    </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2026 Meilani Oktaviana Eka Putri. Seluruh hak cipta dilindungi.</p>
+            <nav class="footer-nav" aria-label="Navigasi footer">
+                <a href="../index.html#beranda">Beranda</a>
+                <a href="../index.html#portofolio">Portofolio</a>
+                <a href="../index.html#kontak">Kontak</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

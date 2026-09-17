@@ -40,10 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Masuk Admin — Amoura Atelier</title>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/toko-rajut/assets/css/style.css">
+<link rel="stylesheet" href="/toko-rajut/assets/css/style.css?v=2">
 </head>
-<body class="admin-body" style="background:var(--admin-ink);">  <div class="login-box">
+<body class="admin-body admin-login">
+  <div class="login-box">
     <h1>Login Admin</h1>
+    <p class="hint">Masuk untuk mengelola katalog Amoura Atelier.</p>
     <?php if ($error): ?><div class="alert alert--gagal"><?= bersihkan($error) ?></div><?php endif; ?>
     <form class="form" method="post" action="login.php">
       <label>Username<input type="text" name="username" required autofocus></label>

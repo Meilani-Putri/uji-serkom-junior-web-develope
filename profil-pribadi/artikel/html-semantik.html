@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menyusun struktur HTML yang mudah dibaca — Meilani Oktaviana Eka Putri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar" aria-label="Navigasi utama">
+        <a href="../index.html#beranda" class="brand">
+            <span class="brand-mark">MO</span>
+            <span class="brand-text">
+                <span class="brand-name">Meilani Oktaviana Eka Putri</span>
+                <span class="brand-role">Junior Web Developer</span>
+            </span>
+        </a>
+        <a href="../index.html#artikel" class="nav-contact">Kembali ke Beranda</a>
+    </nav>
+</header>
+
+<main class="artikel-page">
+  <div class="container">
+
+    <article class="artikel-card">
+    <header class="artikel-header">
+      <span class="article-tag">HTML</span>
+      <h1>Menyusun struktur HTML yang mudah dibaca</h1>
+      <p class="artikel-meta">Ditulis oleh Meilani Oktaviana Eka Putri</p>
+    </header>
+
+    <div class="artikel-body">
+      <p>Waktu pertama belajar HTML, kebiasaan saya masih sederhana: pakai <code>&lt;div&gt;</code> untuk hampir semua hal, lalu diberi nama kelas seadanya seperti <code>box1</code> atau <code>wrapper2</code>. Halamannya jalan, tapi begitu ditambah beberapa section baru, saya sendiri jadi bingung mencari elemen mana yang mengatur bagian mana.</p>
+
+      <h2>Kenapa tag semantik penting</h2>
+      <p>Tag semantik seperti <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, dan <code>&lt;article&gt;</code> memberi tahu maksud sebuah elemen, bukan cuma bentuknya. Manfaat yang langsung saya rasakan:</p>
+      <ul>
+        <li>Kode lebih mudah dibaca ulang — nama tag saja sudah menjelaskan isinya.</li>
+        <li>Screen reader dan mesin pencari bisa memahami struktur halaman dengan lebih baik.</li>
+        <li>Lebih gampang dipetakan ke CSS, karena setiap section punya batas yang jelas.</li>
+      </ul>
+
+      <h2>Kebiasaan yang saya terapkan sekarang</h2>
+      <p>Di proyek web profil ini dan toko Amoura Atelier, saya mulai konsisten memakai satu <code>&lt;section&gt;</code> per topik konten (Tentang, Pendidikan, Keahlian, dst), dengan <code>id</code> yang jelas supaya bisa langsung ditautkan dari menu navigasi. Untuk penamaan kelas, saya coba pakai pola <code>blok__bagian</code> (semacam BEM sederhana) supaya tidak tabrakan antar-section saat file CSS-nya makin panjang.</p>
+      <p>Ini belum sempurna — masih ada beberapa bagian yang saya tulis ulang begitu ketahuan strukturnya kurang rapi. Tapi dibanding versi pertama dulu, sekarang jauh lebih mudah menelusuri kode saya sendiri setelah beberapa minggu tidak dibuka.</p>
+    </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2026 Meilani Oktaviana Eka Putri. Seluruh hak cipta dilindungi.</p>
+            <nav class="footer-nav" aria-label="Navigasi footer">
+                <a href="../index.html#beranda">Beranda</a>
+                <a href="../index.html#portofolio">Portofolio</a>
+                <a href="../index.html#kontak">Kontak</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

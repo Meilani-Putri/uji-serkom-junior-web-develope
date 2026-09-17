@@ -1,283 +1,1305 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meilani Oktaviana Eka Putri — Junior Web Developer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Profil pribadi Meilani Oktaviana Eka Putri, siswa Rekayasa Perangkat Lunak dan Junior Web Developer asal Ponorogo, Jawa Timur."
+    >
+    <title>Meilani Oktaviana Eka Putri | Junior Web Developer</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
-<div class="noise"></div>
+    <!-- Skip Navigation -->
 
-<header class="nav">
-  <a href="#home" class="nav__brand">Profil Pribadi<span>.</span></a>
-  <nav class="nav__links">
-    <a href="#tentang">Tentang</a>
-    <a href="#keahlian">Keahlian</a>
-    <a href="#portofolio">Portofolio</a>
-    <a href="#kontak">Kontak</a>
-    <a href="#pendidikan">Pendidikan</a>
-  </nav>
-  <button class="nav__toggle" id="navToggle" aria-label="Buka menu">
-    <span></span><span></span><span></span>
-  </button>
-</header>
+    <a href="#main-content" class="skip-link">
+        Lewati ke konten utama
+    </a>
 
-<main>
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-  <section id="home" class="hero">
-    <div class="hero__text">
-      <p class="hero__role">Junior Web Developer</p>
-      <h1 class="hero__name">Meilani Oktaviana Eka<br>Putri</h1>
-      <p class="hero__desc">Membangun antarmuka web yang rapi, cepat, dan enak dipakai — dari halaman statis sampai aplikasi dengan basis data. Baru mulai, tapi serius belajar dari fondasi yang benar.</p>
-      <div class="hero__actions">
-        <a href="#portofolio" class="btn btn--solid">Lihat portofolio</a>
-        <a href="#kontak" class="btn btn--ghost">Hubungi saya</a>
-      </div>
-    </div>
-<div class="hero__mark">
-  <div class="hero__photo-wrap">
-    <img src="img/foto saya hitam putih tanpa bg.png" alt="Foto Meilani Oktaviana Eka Putri" class="hero__photo">
-    <span class="hero__accent-dot"></span>
-  </div>
-</div>
-  </section>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigasi utama">
+            <a href="#beranda" class="brand">
+                <span class="brand-mark">MO</span>
+                <span class="brand-text">
+                    <span class="brand-name">
+                        Meilani Oktaviana Eka Putri
+                    </span>
+                    <span class="brand-role">
+                        Junior Web Developer
+                    </span>
+                </span>
+            </a>
+            <button
+                class="nav-toggle"
+                id="navToggle"
+                type="button"
+                aria-label="Buka menu navigasi"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="#beranda">
+                    Beranda
+                </a>
+                <a href="#tentang">
+                    Tentang
+                </a>
+                <a href="#profil">
+                    Profil
+                </a>
+                <a href="#pendidikan">
+                    Pendidikan
+                </a>
+                <a href="#pengalaman">
+                    Pengalaman
+                </a>
+                <a href="#keahlian">
+                    Keahlian
+                </a>
+                <a href="#portofolio">
+                    Portofolio
+                </a>
+                <a href="#kontak" class="nav-contact">
+                    Kontak
+                </a>
+            </div>
+        </nav>
+    </header>
 
-  <section id="tentang" class="section">
-  <div class="section__head">
-    <h2>Tentang saya</h2>
-  </div>
-  <div class="about">
-    <p class="about__statement">Belajar dari dasar Berkarya melalui kode</p>
-    <div class="about__body">
-      <p>Saya adalah siswi Rekayasa Perangkat Lunak (RPL) yang memiliki ketertarikan pada pengembangan website. Saat ini, saya sedang menempuh sertifikasi <em>Junior Web Developer</em> sebagai bagian dari proses untuk mengembangkan dan menguji kemampuan saya dalam dunia web development.</p>
-      <p>Dalam prosesnya, saya mempelajari dasar-dasar pengembangan web, mulai dari HTML untuk membangun struktur halaman, CSS untuk mengatur tampilan, JavaScript untuk menambahkan interaksi, serta PHP dan PostgreSQL untuk mengembangkan fitur dinamis dan mengelola data.</p>
-      <p>Melalui dua proyek uji kompetensi, yaitu website profil pribadi dan toko daring <strong>Amoura Atelier</strong>, saya menerapkan kemampuan tersebut untuk membangun website yang tidak hanya menarik secara visual, tetapi juga memiliki fungsi dan pengelolaan data yang baik.</p>
-    </div>
-  </div>
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
-  <section id="pendidikan">
-  <h2>Pendidikan</h2>
-  <p>Latar belakang pendidikan formal saya.</p>
+    <main id="main-content">
 
-  <div class="pendidikan-container">
-    <div class="pendidikan-card">
-      <h3>SMKN 1 Jenangan Ponorogo</h3>
-      <span class="badge">2024 – Sekarang</span>
-      <p>Jurusan Rekayasa Perangkat Lunak (RPL)</p>
-    </div>
+        <!-- =================================================
+             HERO / BERANDA
+        ================================================== -->
 
-    <div class="pendidikan-card">
-      <h3>SMP Negeri 5 Ponorogo</h3>
-      <span class="badge">2021 - 2024</span>
-    </div>
-  </div>
-</section>
+        <section class="hero" id="beranda">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <p class="hero-status">
+                            <i></i>
+                            Terbuka untuk proyek dan magang
+                        </p>
+                        <h1>
+                            Meilani Oktaviana
+                            <em>Eka Putri</em>
+                        </h1>
+                        <p class="hero-tagline">
+                            Junior Web Developer yang membangun website
+                            rapi, responsif, dan enak dipakai.
+                        </p>
+                        <p class="hero-description">
+                            Siswa Rekayasa Perangkat Lunak asal Ponorogo.
+                            Mengerjakan website dari menyusun tampilan
+                            antarmuka sampai mengelola data di belakangnya.
+                        </p>
+                        <div class="hero-mission">
+                            <div>
+                                <span class="hero-mission__label">Visi</span>
+                                <p>
+                                    Menjadi web developer yang membangun
+                                    produk digital rapi, mudah dipakai, dan
+                                    bisa diandalkan penggunanya.
+                                </p>
+                            </div>
+                            <div>
+                                <span class="hero-mission__label">Misi</span>
+                                <p>
+                                    Belajar dari fondasi yang benar,
+                                    membuktikan kemampuan lewat proyek nyata,
+                                    dan terus memperbaiki kualitas kode yang
+                                    ditulis.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="hero-actions">
+                            <a
+                                href="#portofolio"
+                                class="button button-primary"
+                            >
+                                Lihat portofolio
+                            </a>
+                            <a
+                                href="#kontak"
+                                class="button button-ghost"
+                            >
+                                Hubungi saya
+                            </a>
+                        </div>
+                        <dl class="hero-facts">
+                            <div>
+                                <dt>Domisili</dt>
+                                <dd>Ponorogo, Jawa Timur</dd>
+                            </div>
+                            <div>
+                                <dt>Fokus</dt>
+                                <dd>Front-end &amp; database</dd>
+                            </div>
+                            <div>
+                                <dt>Proyek selesai</dt>
+                                <dd>4 website &amp; sistem</dd>
+                            </div>
+                        </dl>
+                    </div>
 
-  <div class="about__stats">
-    <div class="stat-tile"><span>Basis</span>HTML, CSS, JavaScript</div>
-    <div class="stat-tile"><span>Belajar</span>PHP &amp; PostgreSQL</div>
-    <div class="stat-tile"><span>Alat</span>VS Code, pgAdmin</div>
-    <div class="stat-tile"><span>Target</span>Sertifikasi Junior Web Developer</div>
-  </div>
-</section>
+                    <!-- Foto -->
 
-  <section id="keahlian" class="section section--alt">
-  <div class="section__head">
-    <h2>Keahlian</h2>
-    <p>Bukan angka persen yang dikarang — ini level kenyamanan saya yang sebenarnya di tiap alat.</p>
-  </div>
+                    <figure class="hero-portrait">
+                        <img
+                            src="img/foto saya hitam putih tanpa bg.png"
+                            alt="Foto profil Meilani Oktaviana Eka Putri"
+                        >
+                        <figcaption class="hero-caption">
+                            Sedang menempuh pendidikan di SMK Negeri 1
+                            Jenangan, jurusan Rekayasa Perangkat Lunak.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-  <div class="skillset">
-    <div class="skillset__group">
-      <h3>Front-end</h3>
-      <ol class="skillset__list">
-        <li>
-          <span class="skillset__num">01</span>
-          <div class="skillset__body">
-            <p class="skillset__name">HTML5 semantik</p>
-            <p class="skillset__desc">Struktur halaman rapi, elemen dipilih sesuai makna kontennya.</p>
-          </div>
-          <span class="skillset__level skillset__level--tinggi">Nyaman dipakai</span>
-        </li>
-        <li>
-          <span class="skillset__num">02</span>
-          <div class="skillset__body">
-            <p class="skillset__name">CSS3 &amp; layout responsif</p>
-            <p class="skillset__desc">Flexbox dan Grid jadi andalan, sudah terbiasa desain mobile-first.</p>
-          </div>
-          <span class="skillset__level skillset__level--tinggi">Nyaman dipakai</span>
-        </li>
-        <li>
-          <span class="skillset__num">03</span>
-          <div class="skillset__body">
-            <p class="skillset__name">JavaScript dasar–menengah</p>
-            <p class="skillset__desc">DOM manipulation dan event handling sudah lancar, async masih belajar.</p>
-          </div>
-          <span class="skillset__level skillset__level--tengah">Sedang berkembang</span>
-        </li>
-      </ol>
-    </div>
+        <!-- =================================================
+             TENTANG SAYA
+        ================================================== -->
 
-    <div class="skillset__group">
-      <h3>Back-end &amp; data</h3>
-      <ol class="skillset__list">
-        <li>
-          <span class="skillset__num">04</span>
-          <div class="skillset__body">
-            <p class="skillset__name">PHP prosedural &amp; PDO</p>
-            <p class="skillset__desc">Bisa bikin CRUD aman dengan prepared statement dari nol.</p>
-          </div>
-          <span class="skillset__level skillset__level--tengah">Sedang berkembang</span>
-        </li>
-        <li>
-          <span class="skillset__num">05</span>
-          <div class="skillset__body">
-            <p class="skillset__name">PostgreSQL (query, relasi tabel)</p>
-            <p class="skillset__desc">Paham JOIN, foreign key, dan desain skema sederhana.</p>
-          </div>
-          <span class="skillset__level skillset__level--tengah">Sedang berkembang</span>
-        </li>
-        <li>
-          <span class="skillset__num">06</span>
-          <div class="skillset__body">
-            <p class="skillset__name">Struktur folder proyek</p>
-            <p class="skillset__desc">Terbiasa memisahkan config, includes, dan halaman biar rapi.</p>
-          </div>
-          <span class="skillset__level skillset__level--tinggi">Nyaman dipakai</span>
-        </li>
-      </ol>
-    </div>
+        <section class="section" id="tentang">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Tentang saya</p>
+                    <h2>Mengenal saya lebih dekat</h2>
+                    <p>
+                        Latar belakang singkat, cara saya bekerja, dan
+                        hal yang sedang saya dalami.
+                    </p>
+                </header>
 
-    <div class="skillset__group">
-      <h3>Alat &amp; cara kerja</h3>
-      <ol class="skillset__list">
-        <li>
-          <span class="skillset__num">07</span>
-          <div class="skillset__body">
-            <p class="skillset__name">Git dasar</p>
-            <p class="skillset__desc">Commit, branch, dan push masih di level fundamental.</p>
-          </div>
-          <span class="skillset__level skillset__level--dasar">Masih dasar</span>
-        </li>
-        <li>
-          <span class="skillset__num">08</span>
-          <div class="skillset__body">
-            <p class="skillset__name">pgAdmin</p>
-            <p class="skillset__desc">Terbiasa bikin database, jalankan query, dan cek data lewat GUI.</p>
-          </div>
-          <span class="skillset__level skillset__level--tengah">Sedang berkembang</span>
-        </li>
-        <li>
-          <span class="skillset__num">09</span>
-          <div class="skillset__body">
-            <p class="skillset__name">Debugging &amp; membaca dokumentasi</p>
-            <p class="skillset__desc">Nyaman menelusuri error message dan cari solusinya sendiri.</p>
-          </div>
-          <span class="skillset__level skillset__level--tinggi">Nyaman dipakai</span>
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
+                <div class="about-grid">
+                    <div>
+                        <p class="about-lead">
+                            Saya menikmati proses mengubah sebuah rancangan
+                            menjadi halaman web yang benar-benar bisa
+                            dipakai orang lain.
+                        </p>
+                        <div class="about-body">
+                            <p>
+                                Saya siswa jurusan Rekayasa Perangkat Lunak
+                                di SMK Negeri 1 Jenangan. Selama belajar,
+                                saya terbiasa mengerjakan proyek dari awal:
+                                menyusun struktur halaman, menata tampilan
+                                dengan CSS, menambahkan interaksi dengan
+                                JavaScript, lalu menghubungkannya dengan
+                                database.
+                            </p>
+                            <p>
+                                Beberapa proyek yang pernah saya kerjakan
+                                antara lain website toko rajut Amoura
+                                Atelier, website informasi PPID, sistem
+                                kasir sederhana, dan halaman profil ini
+                                sendiri.
+                            </p>
+                        </div>
+                        <p class="about-quote">
+                            Sebuah website tidak cukup hanya berjalan.
+                            Strukturnya harus jelas, kodenya rapi supaya
+                            mudah dikembangkan lagi, dan tampilannya tetap
+                            nyaman dibuka dari layar kecil maupun besar.
+                        </p>
+                    </div>
 
-  <section id="portofolio" class="section">
-  <div class="section__head">
-    <h2>Portofolio</h2>
-    <p>Proyek yang saya susun sebagai bukti kompetensi dan pengalaman kerja.</p>
-  </div>
+                    <div class="value-stack">
+                        <article class="value-card">
+                            <span class="value-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 6h16M4 12h10M4 18h7"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Rapi sejak awal</h3>
+                                <p>
+                                    Menata file, penamaan, dan struktur kode
+                                    supaya mudah dibaca ulang.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="value-card">
+                            <span class="value-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/>
+                                    <circle cx="12" cy="12" r="3.2"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Belajar dari proses</h3>
+                                <p>
+                                    Mencoba, memperbaiki yang keliru, lalu
+                                    menerapkannya di proyek berikutnya.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="value-card">
+                            <span class="value-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/>
+                                    <circle cx="12" cy="12" r="2.8"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Dipakai, bukan sekadar jadi</h3>
+                                <p>
+                                    Mengutamakan halaman yang mudah dipahami
+                                    oleh penggunanya.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="portfolio-list">
-    <article class="portfolio-item">
-      <span class="portfolio-item__num">01</span>
-      <div class="portfolio-item__body">
-        <div class="portfolio-item__head">
-          <h3>Web Profil Pribadi</h3>
-          <span class="portfolio-item__tag">Web statis</span>
+        <!-- =================================================
+             PROFIL PROFESIONAL
+        ================================================== -->
+
+        <section class="section section-alt" id="profil">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Profil profesional</p>
+                    <h2>Posisi, instansi, dan bidang yang saya tekuni</h2>
+                </header>
+
+                <div class="profile-grid">
+                    <article class="profile-card">
+                        <h3>Posisi</h3>
+                        <p>
+                            Junior Web Developer
+                            <span>
+                                Mengerjakan website statis maupun dinamis
+                                sebagai pembuktian kompetensi.
+                            </span>
+                        </p>
+                    </article>
+                    <article class="profile-card">
+                        <h3>Instansi</h3>
+                        <p>
+                            SMK Negeri 1 Jenangan
+                            <span>
+                                Program Keahlian Rekayasa Perangkat Lunak,
+                                Ponorogo, Jawa Timur.
+                            </span>
+                        </p>
+                    </article>
+                    <article class="profile-card">
+                        <h3>Bidang</h3>
+                        <p>
+                            Pengembangan web
+                            <span>
+                                Perancangan antarmuka, pemrograman web,
+                                dan pengelolaan basis data.
+                            </span>
+                        </p>
+                    </article>
+
+                    <article class="profile-card profile-wide">
+                        <div>
+                            <h3>Teknologi yang saya pakai sehari-hari</h3>
+                            <p>
+                                HTML, CSS, dan JavaScript untuk sisi tampilan;
+                                PHP dan PostgreSQL untuk sisi data. Visual
+                                Studio Code dan Git menemani hampir semua
+                                proyek yang saya kerjakan.
+                            </p>
+                        </div>
+                        <span class="badge">
+                            Terbuka untuk proyek &amp; magang
+                        </span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             PENDIDIKAN
+        ================================================== -->
+
+        <section class="section" id="pendidikan">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Pendidikan</p>
+                    <h2>Riwayat pendidikan</h2>
+                    <p>
+                        Disusun dari jenjang terbaru sampai yang paling
+                        awal.
+                    </p>
+                </header>
+
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-top">
+                            <time class="timeline-date">
+                                2024 &mdash; Sekarang
+                            </time>
+                            <span class="badge">Sedang ditempuh</span>
+                        </div>
+                        <h3>SMK Negeri 1 Jenangan</h3>
+                        <p class="timeline-major">
+                            Rekayasa Perangkat Lunak
+                        </p>
+                        <p>
+                            Mempelajari dasar pemrograman, pengembangan
+                            website, basis data, analisis kebutuhan sistem,
+                            serta pengerjaan proyek perangkat lunak dari
+                            perancangan sampai pengujian.
+                        </p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-top">
+                            <time class="timeline-date">
+                                2021 &mdash; 2024
+                            </time>
+                        </div>
+                        <h3>SMP Negeri 5 Ponorogo</h3>
+                        <p>
+                            Menempuh pendidikan menengah pertama sekaligus
+                            mulai mengenal komputer dan teknologi informasi
+                            sebelum memilih jurusan Rekayasa Perangkat
+                            Lunak.
+                        </p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-top">
+                            <time class="timeline-date">
+                                2015 &mdash; 2021
+                            </time>
+                        </div>
+                        <h3>SD Negeri 1 Sukosari</h3>
+                        <p>
+                            Menyelesaikan pendidikan dasar dan mengikuti
+                            berbagai kegiatan sekolah yang membangun
+                            kebiasaan belajar serta kerja sama.
+                        </p>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-top">
+                            <time class="timeline-date">
+                                2013 &mdash; 2015
+                            </time>
+                        </div>
+                        <h3>TK Dharma Wanita</h3>
+                        <p>
+                            Pendidikan anak usia dini sebagai awal
+                            perjalanan belajar secara formal.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             PENGALAMAN
+        ================================================== -->
+
+        <section class="section section-warm" id="pengalaman">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Pengalaman</p>
+                    <h2>Tempat saya berlatih menulis kode</h2>
+                    <p>
+                        Pengalaman belajar, proyek sekolah, dan kegiatan
+                        di luar jam pelajaran.
+                    </p>
+                </header>
+
+                <div class="experience-grid">
+                    <article class="experience-card">
+                        <div class="experience-top">
+                            <span class="experience-role">
+                                Pengembang website
+                            </span>
+                            <span class="experience-year">2026</span>
+                        </div>
+                        <h3>Amoura Atelier</h3>
+                        <p>
+                            Membangun website toko rajut yang mencakup
+                            katalog produk, kategori, pencarian, keranjang
+                            belanja, checkout, serta halaman admin untuk
+                            mengelola produk dan pesanan.
+                        </p>
+                        <ul class="chip-list">
+                            <li>PHP</li>
+                            <li>PostgreSQL</li>
+                            <li>JavaScript</li>
+                            <li>Responsive</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-card">
+                        <div class="experience-top">
+                            <span class="experience-role">
+                                Perancang tampilan
+                            </span>
+                            <span class="experience-year">2025</span>
+                        </div>
+                        <h3>
+                            Web PPID UPT Latkesmas Murnajati
+                            Kampus Madiun
+                        </h3>
+                        <p>
+                            Menyusun konsep dan tampilan halaman informasi
+                            publik agar data yang disajikan lebih
+                            terstruktur dan mudah ditelusuri pengunjung.
+                        </p>
+                        <ul class="chip-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>UI design</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-card">
+                        <div class="experience-top">
+                            <span class="experience-role">
+                                Proyek kelas
+                            </span>
+                            <span class="experience-year">2025</span>
+                        </div>
+                        <h3>Sistem kasir sederhana</h3>
+                        <p>
+                            Mengerjakan alur transaksi mulai dari pendataan
+                            produk, perhitungan belanja, sampai penyimpanan
+                            riwayat penjualan ke dalam database.
+                        </p>
+                        <ul class="chip-list">
+                            <li>PHP</li>
+                            <li>Database</li>
+                            <li>CRUD</li>
+                        </ul>
+                    </article>
+
+                    <article class="experience-card">
+                        <div class="experience-top">
+                            <span class="experience-role">
+                                Belajar mandiri
+                            </span>
+                            <span class="experience-year">
+                                2024 &mdash; Sekarang
+                            </span>
+                        </div>
+                        <h3>Latihan proyek pribadi</h3>
+                        <p>
+                            Membuat ulang berbagai tampilan website untuk
+                            melatih struktur HTML yang semantik, penataan
+                            CSS, dan penggunaan JavaScript di luar jam
+                            pelajaran.
+                        </p>
+                        <ul class="chip-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Git</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             KEAHLIAN
+        ================================================== -->
+
+        <section class="section skills-section section-dark-panel" id="keahlian">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Keahlian</p>
+                    <h2>Kemampuan teknis dan tingkat penguasaannya</h2>
+                    <p>
+                        Ruas berwarna menunjukkan seberapa jauh saya
+                        menguasai masing-masing kemampuan.
+                    </p>
+                </header>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M9 17 4 12l5-5M15 7l5 5-5 5"/>
+                            </svg>
+                            Front-end
+                        </h3>
+                        <ul>
+                            <li class="skill-row">
+                                <span class="skill-name">HTML semantik</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: mahir">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">CSS &amp; layout responsif</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: mahir">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">JavaScript &amp; DOM</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: cukup">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">Perancangan antarmuka</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: cukup">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <ellipse cx="12" cy="5.5" rx="7.5" ry="3"/>
+                                <path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"/>
+                            </svg>
+                            Back-end &amp; data
+                        </h3>
+                        <ul>
+                            <li class="skill-row">
+                                <span class="skill-name">PHP dasar</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: cukup">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: cukup">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">Perancangan tabel &amp; relasi</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: dasar">
+                                    <i class="on"></i><i class="on"></i><i></i><i></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: dasar">
+                                    <i class="on"></i><i class="on"></i><i></i><i></i><i></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M14.5 6.2a4.2 4.2 0 0 0 5.6 5.5l-8 8a2.6 2.6 0 0 1-3.7-3.7Z"/>
+                                <path d="m6.5 4.5 2 2M4.5 6.5l2 2"/>
+                            </svg>
+                            Alat kerja
+                        </h3>
+                        <ul>
+                            <li class="skill-row">
+                                <span class="skill-name">Visual Studio Code</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: mahir">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">Git &amp; GitHub</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: cukup">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">Insomnia</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: dasar">
+                                    <i class="on"></i><i class="on"></i><i></i><i></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">Canva</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: mahir">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="9" cy="8" r="3.2"/>
+                                <path d="M2.8 19.5a6.2 6.2 0 0 1 12.4 0M16.5 5.2a3.2 3.2 0 0 1 0 5.9M18 19.5a6.3 6.3 0 0 0-2.2-4.8"/>
+                            </svg>
+                            Pendukung
+                        </h3>
+                        <ul>
+                            <li class="skill-row">
+                                <span class="skill-name">Kerja sama tim</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: mahir">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">Ketelitian menulis kode</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: cukup">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">Manajemen waktu proyek</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: cukup">
+                                    <i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i>
+                                </span>
+                            </li>
+                            <li class="skill-row">
+                                <span class="skill-name">Dokumentasi pekerjaan</span>
+                                <span class="skill-meter" role="img" aria-label="Tingkat penguasaan: dasar">
+                                    <i class="on"></i><i class="on"></i><i></i><i></i><i></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <p class="skill-legend">
+                    <span><b></b> Dua ruas: dasar</span>
+                    <span><b></b> Tiga ruas: cukup</span>
+                    <span><b></b> Empat ruas: mahir</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- =================================================
+             PORTOFOLIO
+        ================================================== -->
+
+        <section class="section" id="portofolio">
+            <div class="container">
+                <header class="section-head section-head-split">
+                    <div>
+                        <p class="section-eyebrow">Karya &amp; portofolio</p>
+                        <h2>Proyek yang pernah saya kerjakan</h2>
+                        <p>
+                            Website dan sistem yang saya buat selama
+                            belajar di jurusan Rekayasa Perangkat Lunak.
+                        </p>
+                    </div>
+                    <a class="text-link" href="#kontak">
+                        Diskusi proyek
+                    </a>
+                </header>
+
+                <div class="project-grid">
+
+                    <!-- Proyek utama -->
+
+                    <article class="project-card project-card-wide">
+                        <div class="project-preview project-preview-rajut" aria-hidden="true">
+                            <div class="project-window">
+                                <div class="project-bar">
+                                    <i></i><i></i><i></i>
+                                    <span>localhost/toko-rajut/index.php</span>
+                                </div>
+                                <div class="project-skeleton">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <div class="project-tiles">
+                                        <i></i><i></i><i></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-kind">
+                                <i></i> Website dinamis &middot; toko online
+                            </p>
+                            <h3>Amoura Atelier</h3>
+                            <p>
+                                Website toko rajut rumahan di Madiun dengan
+                                katalog produk, kategori, pencarian, detail
+                                produk, keranjang, checkout, hingga dasbor
+                                admin untuk mengelola produk dan transaksi.
+                            </p>
+                            <ul class="chip-list">
+                                <li>PHP</li>
+                                <li>PostgreSQL</li>
+                                <li>JavaScript</li>
+                                <li>CRUD</li>
+                                <li>Responsive</li>
+                            </ul>
+                            <div class="project-foot">
+                                <span class="project-status">
+                                    Proyek utama uji kompetensi
+                                </span>
+                                <a
+                                    class="text-link"
+                                    href="../toko-rajut/index.php"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Kunjungi website
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proyek lain -->
+
+                    <article class="project-card">
+                        <div class="project-preview project-preview-ppid" aria-hidden="true">
+                            <div class="project-window">
+                                <div class="project-bar">
+                                    <i></i><i></i><i></i>
+                                    <span>ppid.latkesmas-madiun</span>
+                                </div>
+                                <div class="project-skeleton">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-kind">
+                                <i></i> Website informasi
+                            </p>
+                            <h3>Web PPID Latkesmas</h3>
+                            <p>
+                                Halaman informasi publik untuk UPT Latkesmas
+                                Murnajati Kampus Madiun agar pengunjung
+                                lebih cepat menemukan dokumen yang dicari.
+                            </p>
+                            <ul class="chip-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-foot">
+                                <span class="project-status">
+                                    Proyek internal instansi,
+                                    tidak dibuka untuk publik
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-preview project-preview-kasir" aria-hidden="true">
+                            <div class="project-window">
+                                <div class="project-bar">
+                                    <i></i><i></i><i></i>
+                                    <span>sistem-kasir</span>
+                                </div>
+                                <div class="project-skeleton">
+                                    <i></i>
+                                    <i></i>
+                                    <div class="project-tiles">
+                                        <i></i><i></i><i></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-kind">
+                                <i></i> Aplikasi transaksi
+                            </p>
+                            <h3>Sistem kasir</h3>
+                            <p>
+                                Aplikasi kasir sederhana untuk mendata
+                                produk, menghitung total belanja, dan
+                                menyimpan riwayat transaksi ke database.
+                            </p>
+                            <ul class="chip-list">
+                                <li>PHP</li>
+                                <li>Database</li>
+                                <li>CRUD</li>
+                            </ul>
+                            <div class="project-foot">
+                                <span class="project-status">
+                                    Proyek pembelajaran di kelas
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card-wide">
+                        <div class="project-preview" aria-hidden="true">
+                            <div class="project-window">
+                                <div class="project-bar">
+                                    <i></i><i></i><i></i>
+                                    <span>localhost/profil-pribadi</span>
+                                </div>
+                                <div class="project-skeleton">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <div class="project-tiles">
+                                        <i></i><i></i><i></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <p class="project-kind">
+                                <i></i> Website statis &middot; profil pribadi
+                            </p>
+                            <h3>Halaman profil ini</h3>
+                            <p>
+                                Website profil yang sedang Anda buka,
+                                dibangun dengan HTML, CSS, dan JavaScript
+                                tanpa framework, serta menyesuaikan diri
+                                pada berbagai ukuran layar.
+                            </p>
+                            <ul class="chip-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Aksesibilitas</li>
+                            </ul>
+                            <div class="project-foot">
+                                <span class="project-status">
+                                    Bagian dari berkas uji kompetensi
+                                </span>
+                                <a class="text-link" href="#beranda">
+                                    Kembali ke atas
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             SERTIFIKAT / PRESTASI
+        ================================================== -->
+
+        <section class="section section-alt" id="sertifikat">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Sertifikat &amp; prestasi</p>
+                    <h2>Pencapaian selama belajar</h2>
+                </header>
+
+                <div class="certificate-grid">
+                    <article class="certificate-card">
+                        <span class="certificate-year">2026</span>
+                        <span class="certificate-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="7" width="18" height="13" rx="2"/>
+                                <path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/>
+                            </svg>
+                        </span>
+                        <h3>Praktik Kerja Lapangan</h3>
+                        <p>
+                            Pengalaman kerja di lingkungan instansi
+                            sekaligus mengerjakan kebutuhan website bersama
+                            pembimbing lapangan.
+                        </p>
+                        <button
+                            type="button"
+                            class="certificate-view"
+                            disabled
+                        >
+                            Foto menyusul
+                        </button>
+                    </article>
+
+                    <article class="certificate-card">
+                        <span class="certificate-year">2026</span>
+                        <span class="certificate-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="9" r="5.2"/>
+                                <path d="m8.4 13.4-1.2 7 4.8-2.6 4.8 2.6-1.2-7"/>
+                            </svg>
+                        </span>
+                        <h3>Kunjungan Industri</h3>
+                        <p>
+                            Mengikuti kunjungan industri SMKN 1 Jenangan
+                            sebagai peserta di PT Educa Sisfomedia
+                            Indonesia, Salatiga.
+                        </p>
+                        <button
+                            type="button"
+                            class="certificate-view"
+                            data-cert-src="img/sertifikat/kunjungan-industri-1.png"
+                            data-cert-title="Sertifikat Kunjungan Industri"
+                        >
+                            Lihat sertifikat
+                        </button>
+                    </article>
+
+                    <article class="certificate-card">
+                        <span class="certificate-year">2026</span>
+                        <span class="certificate-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3.5" y="4.5" width="17" height="13" rx="2"/>
+                                <path d="M7.5 21h9M12 17.5V21"/>
+                            </svg>
+                        </span>
+                        <h3>
+                            Fundamental of Assistant Web
+                            Developer
+                        </h3>
+                        <p>
+                            Menyelesaikan pelatihan nasional Digital
+                            Talent Academy, Digital Talent Scholarship
+                            2026, selama 11.5 jam pelatihan.
+                        </p>
+                        <button
+                            type="button"
+                            class="certificate-view"
+                            data-cert-src="img/sertifikat/digitalent-nasional-1.png"
+                            data-cert-title="Sertifikat Fundamental of Assistant Web Developer"
+                        >
+                            Lihat sertifikat
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             KEGIATAN
+        ================================================== -->
+
+        <section class="section" id="kegiatan">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Kegiatan</p>
+                    <h2>Aktivitas yang menopang proses belajar</h2>
+                </header>
+
+                <div class="activity-grid">
+                    <article class="activity-card">
+                        <div class="activity-photo activity-photo--empty">
+                            Dokumentasi menyusul
+                        </div>
+                        <div class="activity-body">
+                            <span class="activity-dot" aria-hidden="true"></span>
+                            <div>
+                                <h3>Pengerjaan tugas proyek website</h3>
+                                <p>
+                                    Membuat proyek website sebagai tugas mata
+                                    pelajaran, dari tahap perancangan sampai
+                                    siap ditampilkan kepada guru pembimbing
+                                    untuk dinilai.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="activity-card">
+                        <div class="activity-photo">
+                            <img
+                                src="img/kegiatan/praktik-kerja-lapangan.jpg"
+                                alt="Dokumentasi praktik kerja lapangan"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="activity-body">
+                            <span class="activity-dot" aria-hidden="true"></span>
+                            <div>
+                                <h3>Praktik kerja lapangan</h3>
+                                <p>
+                                    Terlibat langsung dalam kebutuhan teknologi
+                                    informasi di instansi tempat praktik.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="activity-card">
+                        <div class="activity-photo">
+                            <img
+                                src="img/kegiatan/belajar-mandiri-pemrograman.jpg"
+                                alt="Dokumentasi belajar mandiri pemrograman"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="activity-body">
+                            <span class="activity-dot" aria-hidden="true"></span>
+                            <div>
+                                <h3>Belajar mandiri pemrograman</h3>
+                                <p>
+                                    Mengikuti materi dan latihan pemrograman
+                                    web di luar jam pelajaran untuk menambah
+                                    jam terbang menulis kode.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="activity-card">
+                        <div class="activity-photo">
+                            <img
+                                src="img/kegiatan/persiapan-uji-kompetensi.jpg"
+                                alt="Dokumentasi persiapan uji kompetensi"
+                                loading="lazy"
+                            />
+                        </div>
+                        <div class="activity-body">
+                            <span class="activity-dot" aria-hidden="true"></span>
+                            <div>
+                                <h3>Persiapan uji kompetensi</h3>
+                                <p>
+                                    Menyiapkan dokumentasi, mockup, dan produk
+                                    website sebagai bahan penilaian asesor.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             ARTIKEL
+        ================================================== -->
+
+        <section class="section section-warm" id="artikel">
+            <div class="container">
+                <header class="section-head">
+                    <p class="section-eyebrow">Catatan belajar</p>
+                    <h2>Tulisan singkat dari proyek yang saya kerjakan</h2>
+                </header>
+
+                <div class="article-grid">
+                    <article class="article-card">
+                        <span class="article-tag">HTML</span>
+                        <h3>
+                            Menyusun struktur HTML yang mudah dibaca
+                        </h3>
+                        <p>
+                            Catatan tentang pemilihan tag semantik dan
+                            penamaan kelas supaya kode tetap rapi ketika
+                            halaman bertambah banyak.
+                        </p>
+                        <a class="text-link" href="artikel/html-semantik.html">
+                            Baca tulisannya
+                        </a>
+                    </article>
+
+                    <article class="article-card">
+                        <span class="article-tag">Proyek</span>
+                        <h3>
+                            Membangun website toko dari nol
+                        </h3>
+                        <p>
+                            Pengalaman mengerjakan Amoura Atelier, mulai
+                            dari merancang tabel produk sampai menyusun
+                            alur checkout.
+                        </p>
+                        <a class="text-link" href="artikel/membangun-toko-dari-nol.html">
+                            Baca tulisannya
+                        </a>
+                    </article>
+
+                    <article class="article-card">
+                        <span class="article-tag">Database</span>
+                        <h3>
+                            Hal yang saya pelajari soal database
+                        </h3>
+                        <p>
+                            Ringkasan tentang relasi antartabel dan
+                            kesalahan yang sering saya temui saat pertama
+                            kali merancang database.
+                        </p>
+                        <a class="text-link" href="artikel/belajar-database.html">
+                            Baca tulisannya
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             KONTAK
+        ================================================== -->
+
+        <section class="section section-dark" id="kontak">
+            <div class="container">
+                <header class="contact-heading">
+                    <h2>
+                        Hubungi Saya
+                    </h2>
+                </header>
+                <div class="contact-columns">
+
+                    <!-- Domisili -->
+
+                    <address class="contact-block">
+                        <span class="contact-label">
+                            Domisili
+                        </span>
+                        <a
+                            class="contact-value"
+                            href="https://www.google.com/maps/search/?api=1&amp;query=Jl.%20Niken%20Gandini%20No.98%2C%20Plampitan%2C%20Setono%2C%20Kec.%20Jenangan%2C%20Kabupaten%20Ponorogo%2C%20Jawa%20Timur%2063492"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Jl. Niken Gandini No.98,
+                            Plampitan, Setono, Kec.
+                            Jenangan, Kabupaten
+                            Ponorogo, Jawa Timur 63492
+                        </a>
+                    </address>
+
+                    <!-- Email -->
+
+                    <div class="contact-block">
+                        <span class="contact-label">
+                            Email
+                        </span>
+                        <a
+                            class="contact-value"
+                            href="mailto:meilani1856@gmail.com"
+                        >
+                            meilani1856@gmail.com
+                        </a>
+                    </div>
+
+                    <!-- WhatsApp -->
+
+                    <div class="contact-block">
+                        <span class="contact-label">
+                            WhatsApp
+                        </span>
+                        <a
+                            class="contact-value"
+                            href="https://wa.me/6285607153907"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            0856-0715-3907
+                        </a>
+                    </div>
+
+                    <!-- Sosial media -->
+
+                    <div class="contact-block contact-block-social">
+                        <span class="contact-label contact-label-soft">
+                            Ikuti saya
+                        </span>
+                        <div class="social-icons">
+                            <a
+                                href="https://www.instagram.com/mell.meiii/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                                title="Instagram"
+                            >
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                                    <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                                    <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/>
+                                </svg>
+                            </a>
+                            <a
+                                href="https://www.tiktok.com/@alllmeyy"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="TikTok"
+                                title="TikTok"
+                            >
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <path fill="currentColor" d="M16.6 2.8h-3.1v12.4a2.6 2.6 0 1 1-2.2-2.6V9.4a5.8 5.8 0 1 0 5.3 5.8V9.1a7.6 7.6 0 0 0 4.2 1.3V7.5a4.7 4.7 0 0 1-4.2-4.7z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>
+                    &copy; 2026 Meilani Oktaviana Eka Putri.
+                    Seluruh hak cipta dilindungi.
+                </p>
+                <nav class="footer-nav" aria-label="Navigasi footer">
+                    <a href="#beranda">
+                        Beranda
+                    </a>
+                    <a href="#portofolio">
+                        Portofolio
+                    </a>
+                    <a href="#kontak">
+                        Kontak
+                    </a>
+                </nav>
+            </div>
         </div>
-        <p>Halaman yang sedang Anda buka — HTML &amp; CSS murni dengan sedikit JavaScript untuk interaksi navigasi, dibangun tanpa framework agar strukturnya mudah ditelusuri.</p>
-        <div class="portfolio-item__tech">
-          <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-        </div>
-      </div>
-    </article>
+    </footer>
 
-    <article class="portfolio-item">
-      <span class="portfolio-item__num">02</span>
-      <div class="portfolio-item__body">
-        <div class="portfolio-item__head">
-          <h3>Amoura Atelier — Toko Rajutan Tangan</h3>
-          <span class="portfolio-item__tag">Web dinamis</span>
-        </div>
-        <p>Situs usaha rajutan dengan katalog produk yang diambil dari basis data PostgreSQL, halaman detail produk, dan formulir kontak yang tersimpan otomatis. Dibangun dengan PHP dan pola akses data yang aman (prepared statement).</p>
-        <div class="portfolio-item__tech">
-          <span>PHP</span><span>PostgreSQL</span><span>PDO</span>
-        </div>
-        <a href="../toko-rajut/index.php" class="portfolio-item__link">Buka situs Amoura Atelier →</a>
-      </div>
-    </article>
+    <!-- =====================================================
+         LIGHTBOX SERTIFIKAT
+    ====================================================== -->
 
-    <article class="portfolio-item">
-      <span class="portfolio-item__num">03</span>
-      <div class="portfolio-item__body">
-        <div class="portfolio-item__head">
-          <h3>Web PPID — UPT Latkesmas Murnajati</h3>
-          <span class="portfolio-item__tag">Praktik Kerja Lapangan</span>
+    <div class="cert-lightbox" id="certLightbox" hidden>
+        <div class="cert-lightbox-backdrop" data-cert-close></div>
+        <div
+            class="cert-lightbox-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="certLightboxCaption"
+        >
+            <button
+                type="button"
+                class="cert-lightbox-close"
+                data-cert-close
+                aria-label="Tutup pratinjau sertifikat"
+            >
+                &times;
+            </button>
+            <img
+                class="cert-lightbox-img"
+                id="certLightboxImg"
+                src=""
+                alt=""
+            />
+            <p class="cert-lightbox-caption" id="certLightboxCaption"></p>
         </div>
-        <p>Sistem informasi PPID (Pejabat Pengelola Informasi dan Dokumentasi) yang dikembangkan selama PKL, terdiri dari dua modul: Halaman Publik untuk masyarakat dan Dashboard Admin untuk pengelolaan informasi internal.</p>
-        <div class="portfolio-item__tech">
-          <span>PHP</span><span>PostgreSQL</span>
-        </div>
-        <span class="portfolio-item__note">Belum dirilis publik</span>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="kontak" class="section section--alt">
-  <div class="section__head">
-    <h1>Hubungi Saya</h1>
-  </div>
-
-  <div class="kontak__grid">
-    <div class="contact">
-      <div class="contact__item contact__item--alamat">
-        <span>Domisili</span>
-        <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Niken+Gandini+No.98%2C+Ponorogo" target="_blank" rel="noopener">Jl. Niken Gandini No.98, Plampitan, Setono, Kec. Jenangan, Kabupaten Ponorogo, Jawa Timur 63492</a>
-      </div>
-      <div class="contact__item">
-        <span>Email</span>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=meilani1856@gmail.com" target="_blank" rel="noopener">meilani1856@gmail.com</a>
-      </div>
-      <div class="contact__item">
-        <span>WhatsApp</span>
-        <a href="https://wa.me/6285607153907" target="_blank" rel="noopener">0856-0715-3907</a>
-      </div>
     </div>
 
-    <div class="contact__row">
-      <p class="contact__row-label">Ikuti saya</p>
-      <div class="contact__social">
-        <a href="https://instagram.com/mell_maymay" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
-        </a>
-        <a href="https://tiktok.com/@alllmeyy" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3c.4 2.2 1.8 3.7 4 4v2.7c-1.4 0-2.8-.4-4-1.2v6.6c0 3-2.4 5.4-5.4 5.4S3.2 18.1 3.2 15.1 5.6 9.7 8.6 9.7c.4 0 .8 0 1.1.1v2.8c-.4-.1-.7-.2-1.1-.2-1.5 0-2.7 1.2-2.7 2.7S7.1 17.8 8.6 17.8s2.7-1.2 2.7-2.7V3H14z"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- JavaScript -->
 
-</main>
-
-<footer class="footer">
-  <p>© 2026 Meilani O.E.P. Dibuat untuk Uji Kompetensi Skema Junior Web Developer.</p>
-</footer>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

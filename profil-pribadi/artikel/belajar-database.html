@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hal yang saya pelajari soal database — Meilani Oktaviana Eka Putri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar" aria-label="Navigasi utama">
+        <a href="../index.html#beranda" class="brand">
+            <span class="brand-mark">MO</span>
+            <span class="brand-text">
+                <span class="brand-name">Meilani Oktaviana Eka Putri</span>
+                <span class="brand-role">Junior Web Developer</span>
+            </span>
+        </a>
+        <a href="../index.html#artikel" class="nav-contact">Kembali ke Beranda</a>
+    </nav>
+</header>
+
+<main class="artikel-page">
+  <div class="container">
+
+    <article class="artikel-card">
+    <header class="artikel-header">
+      <span class="article-tag">Database</span>
+      <h1>Hal yang saya pelajari soal database</h1>
+      <p class="artikel-meta">Ditulis oleh Meilani Oktaviana Eka Putri</p>
+    </header>
+
+    <div class="artikel-body">
+      <p>Database adalah bagian yang paling banyak membuat saya menghapus dan menggambar ulang skema dari awal. Berikut beberapa kesalahan yang pernah saya buat, dan apa yang akhirnya saya pahami dari sana.</p>
+
+      <h2>Kesalahan pertama: menaruh semua di satu tabel</h2>
+      <p>Versi paling awal skema toko Amoura Atelier, saya sempat menaruh nama kategori langsung sebagai kolom teks di tabel <code>produk</code>. Kelihatannya lebih simpel, sampai saya sadar kalau nama kategori salah ketik di satu baris, filter berdasarkan kategori jadi tidak akurat. Solusinya: pisahkan jadi tabel <code>kategori</code> sendiri, lalu hubungkan lewat <code>kategori_id</code> sebagai foreign key.</p>
+
+      <h2>Memahami relasi lewat kasus nyata, bukan teori dulu</h2>
+      <p>Relasi <em>one-to-many</em> baru benar-benar masuk akal buat saya setelah mengerjakan fitur transaksi: satu <code>pesanan</code> bisa punya banyak baris di <code>pesanan_item</code>. Dari situ saya juga belajar kenapa <code>ON DELETE CASCADE</code> penting di beberapa relasi — supaya menghapus satu pesanan otomatis membersihkan seluruh item di dalamnya, tanpa meninggalkan data yatim di tabel lain.</p>
+
+      <h2>Yang masih terus saya latih</h2>
+      <ul>
+        <li>Menulis query dengan <em>prepared statement</em> secara konsisten, bukan menyisipkan variabel langsung ke SQL.</li>
+        <li>Membaca rencana eksekusi query sederhana, walau untuk proyek sekecil ini belum terlalu terasa dampaknya.</li>
+        <li>Membiasakan diri membuat migrasi/skrip SQL tambahan saat fitur baru butuh tabel baru, bukan mengubah tabel produksi secara langsung tanpa catatan.</li>
+      </ul>
+
+      <p>Belum semua konsep saya kuasai, tapi setiap proyek kecil seperti ini membuat kesalahan-kesalahan lama semakin jarang terulang.</p>
+    </div>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2026 Meilani Oktaviana Eka Putri. Seluruh hak cipta dilindungi.</p>
+            <nav class="footer-nav" aria-label="Navigasi footer">
+                <a href="../index.html#beranda">Beranda</a>
+                <a href="../index.html#portofolio">Portofolio</a>
+                <a href="../index.html#kontak">Kontak</a>
+            </nav>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

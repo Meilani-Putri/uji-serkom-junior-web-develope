@@ -49,3 +49,27 @@ INSERT INTO produk (kategori_id, nama, slug, harga, stok, warna, deskripsi) VALU
 (3, 'Tas Selempang Mini Kirana', 'tas-selempang-mini-kirana', 78000, 20, '#B25D4C', 'Tas selempang rajut ukuran mini, pas untuk dompet dan ponsel, dilengkapi tali kulit sintetis yang bisa diatur panjangnya.'),
 (4, 'Boneka Rajut Kelinci Momo', 'boneka-rajut-kelinci-momo', 65000, 25, '#C9A8B0', 'Boneka rajut amigurumi berbentuk kelinci, aman untuk anak karena diisi dakron food-grade dan jahitan tersembunyi.'),
 (4, 'Gantungan Kunci Rajut Set', 'gantungan-kunci-rajut-set', 25000, 40, '#7C9473', 'Satu set berisi tiga gantungan kunci rajut mini dengan bentuk buah-buahan, cocok untuk suvenir atau hadiah kecil.');
+
+-- Transaksi (Keranjang -> Checkout -> Transaksi)
+CREATE TABLE pesanan (
+  id SERIAL PRIMARY KEY,
+  kode_pesanan VARCHAR(20) NOT NULL UNIQUE,
+  nama_pembeli VARCHAR(80) NOT NULL,
+  email_pembeli VARCHAR(120) NOT NULL,
+  telepon_pembeli VARCHAR(20) NOT NULL,
+  alamat_kirim TEXT NOT NULL,
+  metode_bayar VARCHAR(30) NOT NULL DEFAULT 'transfer',
+  total_harga INT NOT NULL CHECK (total_harga >= 0),
+  status VARCHAR(20) NOT NULL DEFAULT 'menunggu_pembayaran',
+  dibuat_pada TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE pesanan_item (
+  id SERIAL PRIMARY KEY,
+  pesanan_id INT NOT NULL REFERENCES pesanan(id) ON DELETE CASCADE,
+  produk_id INT NOT NULL REFERENCES produk(id),
+  nama_produk VARCHAR(100) NOT NULL,
+  harga_saat_beli INT NOT NULL,
+  jumlah INT NOT NULL CHECK (jumlah > 0),
+  subtotal INT NOT NULL
+);
