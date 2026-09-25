@@ -10,7 +10,7 @@ if ($jumlahAdmin == 0) {
 }
 
 if (is_admin_login()) {
-    header('Location: index.php');
+    header('Location: dashboard.php');
     exit;
 }
 
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($admin && password_verify($password, $admin['password_hash'])) {
         $_SESSION['admin_id'] = $admin['id'];
         $_SESSION['admin_username'] = $admin['username'];
-        header('Location: index.php');
+        header('Location: dashboard.php');
         exit;
     }
     $error = 'Username atau password salah.';
@@ -54,5 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
     <p style="margin-top:18px;"><a href="/toko-rajut/index.php">← Kembali ke situs</a></p>
   </div>
+  <script src="/toko-rajut/assets/js/script.js"></script>
 </body>
 </html>

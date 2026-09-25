@@ -63,7 +63,6 @@ include __DIR__ . '/../includes/admin_header.php';
   <p>Lengkapi detail produk baru untuk katalog Amoura Atelier.</p>
 </div>
 
-<div id="jsErrorAlert" class="alert alert--gagal" style="display: none;"></div>
 <?php if ($error): ?><div class="alert alert--gagal"><?= bersihkan($error) ?></div><?php endif; ?>
 
 <form class="admin-form" id="formTambahProduk" method="post" action="tambah.php" enctype="multipart/form-data" onsubmit="return validasiFormTambah(event)">
@@ -173,7 +172,6 @@ include __DIR__ . '/../includes/admin_header.php';
     const kategori = document.getElementById('kategori_id').value;
     const harga = parseFloat(document.getElementById('harga').value);
     const stok = parseInt(document.getElementById('stok').value);
-    const errBox = document.getElementById('jsErrorAlert');
 
     let errors = [];
 
@@ -197,8 +195,7 @@ include __DIR__ . '/../includes/admin_header.php';
 
     if (errors.length > 0) {
       event.preventDefault();
-      errBox.innerHTML = errors.join('<br>');
-      errBox.style.display = 'block';
+      tampilkanToast(errors.join('<br>'), 'gagal');
       window.scrollTo(0, 0);
       return false;
     }

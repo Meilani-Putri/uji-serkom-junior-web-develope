@@ -39,7 +39,6 @@ include __DIR__ . '/../includes/admin_header.php';
   <p>Buat kategori baru untuk mengelompokkan produk.</p>
 </div>
 
-<div id="jsErrorAlert" class="alert alert--gagal" style="display: none;"></div>
 <?php if ($error): ?><div class="alert alert--gagal"><?= bersihkan($error) ?></div><?php endif; ?>
 
 <form class="form" id="formTambahKategori" method="post" action="kategori_tambah.php" onsubmit="return validasiKategori(event)">
@@ -52,15 +51,13 @@ include __DIR__ . '/../includes/admin_header.php';
 <script>
 function validasiKategori(event) {
   const nama = document.getElementById('nama').value.trim();
-  const errBox = document.getElementById('jsErrorAlert');
   let errors = [];
 
   if (nama.length < 3) errors.push("Nama kategori minimal 3 karakter.");
 
   if (errors.length > 0) {
     event.preventDefault();
-    errBox.innerHTML = errors.join('<br>');
-    errBox.style.display = 'block';
+    tampilkanToast(errors.join('<br>'), 'gagal');
     window.scrollTo(0, 0);
     return false;
   }

@@ -58,3 +58,28 @@ function ikon(string $nama, string $kelas = ''): string
 
     return $buka . $isi . '</svg>';
 }
+
+/**
+ * Daftar status pesanan yang valid, dengan label tampilan.
+ * Dipakai di admin (dropdown ubah status) dan untuk badge warna.
+ */
+function daftar_status_pesanan(): array
+{
+    return [
+        'menunggu_pembayaran' => 'Menunggu Pembayaran',
+        'diproses'            => 'Diproses',
+        'dikirim'             => 'Dikirim',
+        'selesai'             => 'Selesai',
+        'dibatalkan'          => 'Dibatalkan',
+    ];
+}
+
+/**
+ * Render badge status berwarna (dipakai di tabel pesanan/laporan/struk).
+ */
+function badge_status(string $status): string
+{
+    $label = daftar_status_pesanan()[$status] ?? ucwords(str_replace('_', ' ', $status));
+    $kelas = preg_replace('/[^a-z_]/', '', $status);
+    return '<span class="status-badge status-badge--' . $kelas . '"><span class="status-badge__dot"></span>' . bersihkan($label) . '</span>';
+}

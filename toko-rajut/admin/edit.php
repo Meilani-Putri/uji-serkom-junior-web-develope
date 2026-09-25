@@ -76,7 +76,6 @@ $gambarPreviewUrl = !empty($produk['gambar']) ? '/toko-rajut/assets/img/produk/'
   <p>Perbarui detail produk <?= bersihkan($produk['nama']) ?>.</p>
 </div>
 
-<div id="jsErrorAlert" class="alert alert--gagal" style="display: none;"></div>
 <?php if ($error): ?><div class="alert alert--gagal"><?= bersihkan($error) ?></div><?php endif; ?>
 
 <form class="admin-form" id="formEditProduk" method="post" action="edit.php?id=<?= (int)$id ?>" enctype="multipart/form-data" onsubmit="return validasiFormEdit(event)">
@@ -186,7 +185,6 @@ $gambarPreviewUrl = !empty($produk['gambar']) ? '/toko-rajut/assets/img/produk/'
     const nama = document.getElementById('nama').value.trim();
     const harga = parseFloat(document.getElementById('harga').value);
     const stok = parseInt(document.getElementById('stok').value);
-    const errBox = document.getElementById('jsErrorAlert');
 
     let errors = [];
 
@@ -209,8 +207,7 @@ $gambarPreviewUrl = !empty($produk['gambar']) ? '/toko-rajut/assets/img/produk/'
 
     if (errors.length > 0) {
       event.preventDefault();
-      errBox.innerHTML = errors.join('<br>');
-      errBox.style.display = 'block';
+      tampilkanToast(errors.join('<br>'), 'gagal');
       window.scrollTo(0, 0);
       return false;
     }

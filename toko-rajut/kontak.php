@@ -75,8 +75,6 @@ include __DIR__ . '/includes/header.php';
         <div class="alert alert--<?= $status['tipe'] ?>" id="notifAlert"><?= bersihkan($status['teks']) ?></div>
       <?php endif; ?>
 
-      <div id="jsKontakAlert" class="alert alert--gagal" style="display: none;"></div>
-
       <form class="form" id="formKontak" method="post" action="kontak.php" onsubmit="return validasiKontak(event)">
         <label>Nama<input type="text" id="nama" name="nama" value="<?= bersihkan($_POST['nama'] ?? '') ?>" minlength="3" required></label>
         <label>Email<input type="email" id="email" name="email" value="<?= bersihkan($_POST['email'] ?? '') ?>" required></label>
@@ -92,7 +90,6 @@ function validasiKontak(event) {
   const nama = document.getElementById('nama').value.trim();
   const email = document.getElementById('email').value.trim();
   const pesan = document.getElementById('pesan').value.trim();
-  const errBox = document.getElementById('jsKontakAlert');
 
   let errors = [];
 
@@ -105,8 +102,7 @@ function validasiKontak(event) {
 
   if (errors.length > 0) {
     event.preventDefault();
-    errBox.innerHTML = errors.join('<br>');
-    errBox.style.display = 'block';
+    tampilkanToast(errors.join('<br>'), 'gagal');
     window.scrollTo(0, 0);
     return false;
   }

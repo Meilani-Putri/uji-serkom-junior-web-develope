@@ -49,8 +49,6 @@ include __DIR__ . '/includes/header.php';
     <li><span>3</span> Selesai</li>
   </ol>
 
-  <div id="jsCheckoutAlert" class="alert alert--gagal" style="display: none;"></div>
-
   <?php if (!empty($errors)): ?>
     <div class="alert alert--gagal">
       <?= implode('<br>', array_map('bersihkan', $errors)) ?>
@@ -117,7 +115,6 @@ function validasiCheckout(event) {
   const email = document.getElementById('email').value.trim();
   const telepon = document.getElementById('telepon').value.trim();
   const alamat = document.getElementById('alamat').value.trim();
-  const errBox = document.getElementById('jsCheckoutAlert');
 
   let errors = [];
 
@@ -133,13 +130,11 @@ function validasiCheckout(event) {
 
   if (errors.length > 0) {
     event.preventDefault();
-    errBox.innerHTML = errors.join('<br>');
-    errBox.style.display = 'block';
+    tampilkanToast(errors.join('<br>'), 'gagal');
     window.scrollTo(0, 0);
     return false;
   }
 
-  errBox.style.display = 'none';
   event.preventDefault();
   document.getElementById('modalKonfirmasi').style.display = 'flex';
   return false;
