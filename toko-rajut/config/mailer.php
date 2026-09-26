@@ -16,26 +16,26 @@ function kirim_email_konfirmasi(string $emailTujuan, string $namaPembeli, string
 
     try {
         // --- TAMPILKAN ERROR JIKA GAGAL ---
-        $mail->SMTPDebug = 2; 
+        $mail->SMTPDebug = 0;
 
         $mail->isSMTP();
-        
-        // --- 1. PAKSA PENGGUNAAN IPv4 AGAR TIDAK HANG DI RAILWAY ---
-        $mail->Host       = gethostbyname('smtp.gmail.com'); 
-        
+
+        // Pakai nama domain langsung, JANGAN diubah ke IP lewat gethostbyname().
+        // Sertifikat SSL Gmail diterbitkan atas nama domain ini, bukan atas nama IP-nya.
+        $mail->Host       = 'smtp.gmail.com';
+
         $mail->SMTPAuth   = true;
-        
-        // --- 2. BACA VARIABEL DARI RAILWAY ---
+
+        // --- BACA VARIABEL DARI ENV (Railway) ATAU .env (lokal) ---
         $smtpEmail = getenv('SMTP_EMAIL') ?: $_ENV['SMTP_EMAIL'] ?? '';
         $smtpPass  = getenv('SMTP_APP_PASSWORD') ?: $_ENV['SMTP_APP_PASSWORD'] ?? '';
-        
+
         $mail->Username   = $smtpEmail;
         $mail->Password   = $smtpPass;
-        
-        // --- 3. GANTI JALUR KE PORT 465 (SMTPS) ---
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; 
-        $mail->Port       = 465; 
-        
+
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
+
         $mail->CharSet    = 'UTF-8';
 
         $mail->setFrom($smtpEmail, 'Amoura Atelier');
@@ -51,7 +51,7 @@ function kirim_email_konfirmasi(string $emailTujuan, string $namaPembeli, string
                     " . nl2br(htmlspecialchars($isiPesan)) . "
                 </blockquote>
                 <p><strong>Status pesanan:</strong>
-                    <span style='background:#7C9473; color:#fff; padding:4px 10px; border-radius:99px; font-size:13px;'>Diterima</span>
+                    <span style='background:#7C9473; color:#fff; padding:4px 10px; border-radius:99px; font-size:13px;'>Diproses</span>
                 </p>
                 <p>Tim kami akan menghubungi kamu lewat email ini atau WhatsApp dalam 1x24 jam.</p>
                 <p style='color:#6B6155; font-size:13px;'>— Amoura Atelier, rajutan tangan dari Madiun</p>
